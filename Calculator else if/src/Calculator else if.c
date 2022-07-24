@@ -18,7 +18,7 @@ int main(void) {
 	setbuf(stdout,NULL);
 	printf("Enter 2 numbers");
 	scanf("%d,%d,",&num1,&num2);
-	printf("Enter a choice to proceed. \n 1.Addition \t 2.Subtraction\n 3.Multiplication \t 4.Division");
+	printf("Enter a choice to proceed. \n 1.Addition \t\t 2.Subtraction\n 3.Multiplication \t 4.Division");
 	scanf("%d",&choice);
 	if (choice==1){
 		result=num1+num2;
@@ -35,9 +35,11 @@ int main(void) {
 	else if(choice==4){
 		result=num1/num2;
 		printf("Result =%f",result);
+
 	}
 	else{
 		printf("Please enter a choice from the list");
 	}
+
 	return EXIT_SUCCESS;
 }
