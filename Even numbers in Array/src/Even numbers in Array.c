@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : Selection.c
+ Name        : Even.c
  Author      : 
  Version     :
  Copyright   : Your copyright notice
@@ -12,32 +12,27 @@
 #include <stdlib.h>
 
 int main(void) {
-	int i,j,n,arr[100],temp=0;
+
+	int i,n,arr[100],even=0;
 	setbuf(stdout,NULL);
-	printf("Enter the array limit\n");
+	printf("Enter the size of array\n");
 	scanf("%d",&n);
 	printf("Enter the array elements\n");
+
 	for (i=0;i<n;i++){
 		scanf("%d",&arr[i]);
 	}
 
-	for (i=0; i<n-1;i++){
-		for (j=i+1;j<n;j++){
-			if(arr[i]>arr[j]){
-				temp=arr[i];
-				arr[i]=arr[j];
-				arr[j]=temp;
-			}
-			else{
-				continue;
-			}
+
+	for (i=0;i<n;i++){
+		if (arr[i]%2==0){
+			even+=1;
+		}
+		else{
+			continue;
 		}
 	}
+	printf("Number of even numbers in array=%d",even);
 
-	printf("Sorted Array:\n");
-
-	for(i=0;i<n;i++){
-		printf("%d ",arr[i]);
-	}
 	return EXIT_SUCCESS;
 }
